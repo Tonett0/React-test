@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <h1>hello world, html</h1>
+    <script src="script.js"></script> -->
+    <script>
+        // function heyFunc(myFunction){
+        //     myFunction('HI!!!')
+        //     myFunction('HI!!!')
+        //     myFunction('HI!!!')
+        // }
+        // console.log(heyFunc)
+        // heyFunc(console.log)
+        // heyFunc(alert)
+
+        // function echoSheep(i){
+        //     console.log('第'+i+'隻綿羊')
+        // }
+        // for(var i =1;i<11;i++){
+        //     echoSheep(i)
+        // }
+
+
+        //----------------------------------------------------------------------------------
+       
+        //-------Map(對陣列中的element做變動)
+        // var dogs = ['boy1', 'boy2', 'girl3', 'girl4'];
+        // var result = dogs.map(funtion(dog){
+        //     return dog +'is good'
+        // })
+        // console.log(result)
+
+        // var array1 = [1,4,9,16]
+        // var result = array1.map(function(array){
+        //     return array + 'good'
+        // })
+        // console.log(result);
+
+        // var dogs = ['boy1','boy2','girl1','girl2']
+        // var result = dogs.map(function(dog){
+        //     return dog + 'good'
+        // })
+        // console.log(result);
+
+        // var dogs = [1,2,3,4]
+        // var result = dogs.map(function(dog){
+        //     return dog + 'good'
+        //     //一般函式要寫return =>46
+        // })
+        // console.log(result);
+
+        // const array1 = [1,4,9,16];
+        // const map1 = array1.map( x=>x*2);
+        // console.log( map1);
+
+        //var dogs = [1,2,3,4]
+        //var result = dogs.map( dog => dog*2 + 'good') 
+        //箭頭函式不用寫return   =>36  
+        //function(dog)= dog => dog*2 + 'good' 
+        //console.log(result);
+
+        // var dogs = ['boy1','boy2','girl1','girl2']
+        // var result = dogs.map( dog => dog*2 + 'good' )
+        // //字串不能X2
+        // console.log(result);
+
+        //----------------------------------------------------------------------------------
+
+        //-----用for寫法達到map的效果
+        // var dogs = ['boy1','boy2','girl1','girl2']
+        // var result = dogs.map(function(dog){
+        //     return dog + ' is good' 
+        // })
+        // console.log(result)
+        // console.log(dogs)
+
+        // var dogs = ['boy1','boy2','girl1','girl2']
+        // var result = []
+        // for ( var i =0; i< dogs.length; i++){
+        //     console.log (dogs[i])
+        //     var str = dogs[i] + 'is good';
+        //     console.log (str)
+        // }
+
+        // var dogs = ['boy1','boy2','girl1','girl2']
+        // var result = dogs.map(function(dog){
+        //     return dog + ' is good' 
+        // })
+        // function map(dogs){
+        //     var result = []
+        //     for ( var i=0; i<dogs.length; i++){
+        //     var str = dogs[i]+' is good'
+        //     console.log(str)
+        //     result.push(str)
+        //     }
+        //     return result;
+        // }
+       
+        //------forEach(個別秀出陣列中的每個element)
+        // var dogs = ['boy1','boy2','girl1','girl2']
+        // var result =  dogs.forEach(function(dog){
+        //     console.log(dog)  
+        // })
+        
+        //-----用for寫法達到forEach的效果
+        // var dogs = ['boy1','boy2','girl1','girl2']
+        // for(let i = 0; i<dogs.length; i++){
+        //     console.log(dogs[i])
+        // }
+
+
+        //----------------------------------------------------------------------------------
+
+        //-----filter(過濾、篩選符合條件的「所有資料」，組成陣列)
+
+        // var arr = [1,1,2,3,4,5,6,7,8,9]
+        // new_arr = arr.filter(function(element){
+        //     return (element>1) && (element<3);
+        // })
+        // console.log(new_arr)
+
+        // var arr = [
+        //     {name:"Tom",age:20},
+        //     {name:"Mary",age:30},
+        //     {name:"Bill",age:50},
+        // ]
+        // narr = arr.filter(function(person){
+        //     return person.age >20
+        // })
+        // console.log(narr)
+
+
+        // var arr = [
+        //     {name:"Tom",age:20},
+        //     {name:"Mary",age:30},
+        //     {name:"Bill",age:50},
+        // ]
+        // narr = arr.filter(function(person){
+        //     return person.name === "Tom"
+        // })
+        // console.log(narr)
+
+
+        //---------find(過濾、篩選符合條件的「第一筆資料」輸出)
+        
+
+        // var arr = [1,1,2,3,4,5,6,7,8,9]
+        // ans = arr.filter(function(num){
+        //     return num === 1;
+        // })
+        // console.log(ans)
+
+        // const arr = [5,8,12,130,44];
+        // let ans = arr.find(function(num){
+        //     return num === 5
+        // })
+        // console.log(ans);
+        //----filter可以抓重複的資料，find只能抓第一筆重複的資料
+
+        //----------------------------------------------------------------------------------
+        
+
+        //-----Array.prototype: 讓陣列具有基本的能力
+
+        //----reduce:將陣列結果加總
+        //----基本抓法
+        // var arr = [1,1,2,3,4,5,6,7,8,9]
+        // var count = 0;
+        // for (var i =0; arr.length>i; i++){
+        //     count = count+arr[i]
+        // }
+        // console.log(count)
+
+        //----forEach抓法
+        // var total = arr.forEach(function(num){
+        //     count = count + num
+        // })
+        // console.log(count) 
+
+        //-----reduce抓法
+        // var arr = [1,1,2,3,4,5,6,7,8,9]
+        // var total = arr.reduce(function(sum,current){
+        // sum += current
+        // return sum;
+        // },0)
+        // console.log(total)
+        
+
+        //----------------------------------------------------------------------------------
+
+        
+        //-----iterator迭代器:回傳字串中的第一個字元
+        
+
+        //------Symbol.iterator 的用法
+        // var mystring = 'hello';
+        // var iterator = mystring[Symbol.iterator]();
+        //輸入iterator()執行，再輸入iterator.next()，會顯示h，再輸入iterator.next()，會顯示e，以此類推
+        
+
+        //------next的用法
+        // var arr = [11,22,33,44]
+        // var iterator1 = arr[Symbol.iterator]();
+        // console.log(iterator1.next())
+        // console.log(iterator1.next())
+        // console.log(iterator1.next())
+        // console.log(iterator1.next())
+        // console.log(iterator1.next())
+              
+
+        //----------------------------------------------------------------------------------
+
+        
+        //----- for in 與 for of 的差別
+        //for in ES5的標準；for of ES6的新標準
+        //for in 迭代可列舉的屬性
+        //for of 可以迭代「可迭代的物件」 iterable object// iterator
+
+        //----for of 的用法
+        //  var mystring = 'hello';
+        //  var arr = [11,22,33,44,55,66,77]
+
+        //  for(let str of mystring){
+        //     console.log(str)
+        //  }
+        //  for(let element of arr){
+        //     console.log(element)
+        //  }
+
+        //----for in 的用法
+        //  var    obj               = {   a    :      1   ,    b   :      2    ,   c    :     3     };
+        //  // 「objName」           = {「prop」:「obj[prop],「prop」:「obj[prop],「prop」:「obj[prop]};
+        //  //                         {   鍵   :    鍵值  ,    鍵   :    鍵值   ,   鍵   :    鍵值   };
+        //  //屬性可為字串、數字、bool等{      屬性        ,       屬性         ,       屬性         };
+         
+        //  function show_prop(propobjprop, objName){
+        //                 var result = "";
+
+        //     for ( var prop in obj){  //obj(物件)內的每個prop(屬性)都要做
+        //         result+= objName + "." + prop + "=" + obj[prop] + "\n";
+        //     //             obj   + "." +  a   + "=" +     1
+        //     }
+        //     console.log(result) ;
+        //     return result;
+        //  }
+        //  alert(show_prop(     obj     ,  "o"   )+"123");
+        //  //             (用obj帶入函式 ,用o命名 )
+        
+        
+        //----------------------------------------------------------------------------------
+
+
+        //----- template literals 與 string literals
+
+        // var a = 1;  //  1 = 字面量
+
+        // var str = "ab\nc";  //  string literals需用跳脫字元 \n 
+        // console.log(str)
+
+
+        // var str2 = `ab     
+        // c`                 //   template literals可直接換行
+        // console.log(str2)
+        
+
+        //----template literals  
+        
+        // let name = 'John';   //鍵盤上數字1左邊的符號，有換行、可崁入變數的功能
+        // let greeting = `Hello ${name}! ${name}! ${name}! ${name}!`;
+        // console.log(greeting)
+
+
+        //----string literals
+
+        // let name = 'John';  //或用""代替''
+        // let greeting = 'Hello, ' + name + '!';
+
+
+        //----------------------------------------------------------------------------------
+
+        //----- 拓展運算子用法console.log(...XXX)
+
+        //----1.取出陣列內的值       
+        // let arr= [1,2.3,4,5]
+        // let result = Math.min(arr)      
+        // console.log(result)              //括號內要是數值，不然輸出會是NaN
+        // let result1 = Math.min(...arr)   
+        // console.log(result1)             //輸出會是最小值 1
+
+
+        //----2.取出2個陣列內的值，重組成新陣列
+        // let arr1= [1,2.3,4,5]
+        // let arr2= [5,6,7,8,9]
+        // let arr3= [...arr1,...arr2]      //等同於307 
+        // console.log(arr3)
+        
+        // let arr4 = arr1.concat(arr2)
+        // console.log(arr4)                //等同於303
+
+        
+        //----3.使用在物件上
+        // let obj1 = {a:1,b:2,c:3}
+        // let obj2 = {c:4,d:5,e:2}
+        // let result = {...obj1,...obj2}
+        // console.log(result)                //{a: 1, b: 2, c: 4, d: 5, e: 2}
+        //                                              //c的部分，後項會取代前項
+        
+        //----------------------------------------------------------------------------------
+        
+        //----- 箭頭函式
+
+        //----1.正常情況回傳值
+        // const function1 = X =>  x+1
+        // console.log(function1(x=1))
+
+        // //----2.加了括號不會有回傳值
+        // const function2 = X => {x+1}            
+        // console.log(function2(x=1))
+
+        // //----3.加括號想要有回傳值，需要return
+        // const function3 = X => {x+1
+        //      return x                   
+        // } 
+        // console.log(function3(x=1))  
+
+        //----- 4.call與this的關係
+        // function greet(){
+        //     let reply= `hi, ${this.person} is ${this.age} years old`
+        //     //              call會把obj的內容帶到this中
+        //     console.log(reply);
+        // }
+        // var obj = {
+        //     person:'Bill',
+        //     age:12,
+            
+        // };
+        // greet.call(obj);                   
+
+
+        //----5.一般函式跟箭頭函式對於this的不同之處
+
+        //一般函式對於this
+        // const obj = {a:1,b:2}
+
+        // function func(){
+        //     console.log("out1",this.a)
+        //     setTimeout(function(){            //對照366
+        //         console.log("out2",this.a)
+        //     },10)
+        // }
+        // func.call(obj)
+
+        //箭頭函式對於this
+        // const obj1 = {c:3,d:4}
+
+        // function func1(){
+        //     console.log("out3",this.c)
+        //     setTimeout(()=>{                   //對照355
+        //         console.log("out4",this.c)
+        //     },10)
+        // }
+        // func1.call(obj1)
+
+        //----------------------------------------------------------------------------------
+
+        //----API
+
+
+
+    </script>
+</body>
+</html>
